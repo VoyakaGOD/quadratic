@@ -74,19 +74,61 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_i_o_lib_8hpp_source.html">IOLib.hpp</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="my__assert_8hpp_source.html">my_assert.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab00afc21fd4291cb8acae81f1fe94f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#ab00afc21fd4291cb8acae81f1fe94f08">InputCoefficients</a> (double *a, double *b, double *c)</td></tr>
-<tr class="separator:ab00afc21fd4291cb8acae81f1fe94f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09840ca379cbceebc9f590d9323a0501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#a09840ca379cbceebc9f590d9323a0501">InputCoefficientsFromFile</a> (FILE *file, double *a, double *b, double *c)</td></tr>
+<tr class="separator:a09840ca379cbceebc9f590d9323a0501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b266ec3d573f9a0a4d2e6638ad972b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#a77b266ec3d573f9a0a4d2e6638ad972b">InputCoefficientsFromStdin</a> (double *a, double *b, double *c)</td></tr>
+<tr class="separator:a77b266ec3d573f9a0a4d2e6638ad972b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf423e8096f85e14175e7ef52f3c7a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#adf423e8096f85e14175e7ef52f3c7a27">DisplayRoots</a> (<a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a> rootsCount, double x1, double x2)</td></tr>
 <tr class="memdesc:adf423e8096f85e14175e7ef52f3c7a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cute display of roots.  <a href="_i_o_lib_8cpp.html#adf423e8096f85e14175e7ef52f3c7a27">More...</a><br /></td></tr>
 <tr class="separator:adf423e8096f85e14175e7ef52f3c7a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763787b93c48794d3e6d5ae77b59f6eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#a763787b93c48794d3e6d5ae77b59f6eb">DisplayEquation</a> (double a, double b, double c)</td></tr>
+<tr class="memdesc:a763787b93c48794d3e6d5ae77b59f6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cute display of equation.  <a href="_i_o_lib_8cpp.html#a763787b93c48794d3e6d5ae77b59f6eb">More...</a><br /></td></tr>
+<tr class="separator:a763787b93c48794d3e6d5ae77b59f6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad41bb5515d18ca358e707611a9c4985d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o_lib_8cpp.html#ad41bb5515d18ca358e707611a9c4985d">WaitChar</a> ()</td></tr>
+<tr class="memdesc:ad41bb5515d18ca358e707611a9c4985d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear stdin and wait next char.  <a href="_i_o_lib_8cpp.html#ad41bb5515d18ca358e707611a9c4985d">More...</a><br /></td></tr>
 <tr class="separator:ad41bb5515d18ca358e707611a9c4985d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a763787b93c48794d3e6d5ae77b59f6eb" name="a763787b93c48794d3e6d5ae77b59f6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763787b93c48794d3e6d5ae77b59f6eb">&#9670;&nbsp;</a></span>DisplayEquation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayEquation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cute display of equation. </p>
+
+</div>
+</div>
 <a id="adf423e8096f85e14175e7ef52f3c7a27" name="adf423e8096f85e14175e7ef52f3c7a27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf423e8096f85e14175e7ef52f3c7a27">&#9670;&nbsp;</a></span>DisplayRoots()</h2>
 
@@ -123,14 +165,63 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab00afc21fd4291cb8acae81f1fe94f08" name="ab00afc21fd4291cb8acae81f1fe94f08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab00afc21fd4291cb8acae81f1fe94f08">&#9670;&nbsp;</a></span>InputCoefficients()</h2>
+<a id="a09840ca379cbceebc9f590d9323a0501" name="a09840ca379cbceebc9f590d9323a0501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09840ca379cbceebc9f590d9323a0501">&#9670;&nbsp;</a></span>InputCoefficientsFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InputCoefficients </td>
+          <td class="memname">void InputCoefficientsFromFile </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Input the coeffitients values from file. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>file from which we get data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>first coefficient </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>second coefficient </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">c</td><td>third coefficient </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77b266ec3d573f9a0a4d2e6638ad972b" name="a77b266ec3d573f9a0a4d2e6638ad972b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b266ec3d573f9a0a4d2e6638ad972b">&#9670;&nbsp;</a></span>InputCoefficientsFromStdin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputCoefficientsFromStdin </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -154,7 +245,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Input the coeffitients values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Input the coeffitients values from stdin stream. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>first coefficient </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>second coefficient </td></tr>
@@ -179,6 +270,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Clear stdin and wait next char. </p>
 
 </div>
 </div>

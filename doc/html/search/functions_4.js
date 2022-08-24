@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['run_0',['Run',['../equations_8test_8cpp.html#a5c51cfc7cb51930fb5905166184b6829',1,'equations.test.cpp']]]
+  ['printtestresult_0',['PrintTestResult',['../equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216',1,'equations.test.cpp']]]
 ];

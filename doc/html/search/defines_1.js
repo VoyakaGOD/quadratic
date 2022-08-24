@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['null_0',['NULL',['../equations_8cpp.html#a070d2ce7b6bb7e5c05602aa8c308d0c4',1,'equations.cpp']]]
+  ['big_5fepsilon_0',['BIG_EPSILON',['../equations_8cpp.html#a763d2cd8e54a0ca42de4d8adc2da7714',1,'equations.cpp']]]
 ];

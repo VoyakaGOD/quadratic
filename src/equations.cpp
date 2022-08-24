@@ -1,9 +1,8 @@
 #include "equations.hpp"
-#include <assert.h>
+#include "my_assert.hpp"
 #include <math.h>
 
 #define BIG_EPSILON 1e-7
-#define NULL 0
 
 int IsTiny(double num)
 {
