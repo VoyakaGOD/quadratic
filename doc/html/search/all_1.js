@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['infinity_5froots_0',['INFINITY_ROOTS',['../proj_8cpp.html#a928b8c37ec9c63bf66055ebc62e64b9d',1,'proj.cpp']]],
-  ['inputcoefficients_1',['InputCoefficients',['../proj_8cpp.html#ab00afc21fd4291cb8acae81f1fe94f08',1,'proj.cpp']]]
+  ['b_0',['B',['../struct_test_info.html#ad9f40c82be5e5fd9a6e84a7625a387aa',1,'TestInfo']]],
+  ['big_5fepsilon_1',['BIG_EPSILON',['../equations_8cpp.html#a763d2cd8e54a0ca42de4d8adc2da7714',1,'equations.cpp']]]
 ];

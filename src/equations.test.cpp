@@ -6,6 +6,16 @@
 int NumberOfTest = 1;
 int IsTestFailed = 0;
 
+typedef struct 
+{
+    double A;
+    double B;
+    double C;
+    RootsCount RootsCount;
+    double X1;
+    double X2;
+} TestInfo;
+
 /// Rejects the test.
 /// @return 1 if condtion failed else 0
 int Assert(int condition)
@@ -22,12 +32,12 @@ void Run(void (*test)())
     IsTestFailed = 0;
     printf("test %i: start!\n", NumberOfTest);
     test();
-    printf("test %i: %s!\n", NumberOfTest, IsTestFailed ? "fail" : "success");
+    printf("---------------------------------------Result: %s!\n", IsTestFailed ? "fail[X]" : "success[V]");
     NumberOfTest++;
 }
 
 /// Compare A{a1, a2} and B{b1, b2} without order.
-int isSetsEqual(double a1, double a2, double b1, double b2)
+int IsSetsEqual(double a1, double a2, double b1, double b2)
 {
     return (IsTiny(a1 - b1) && IsTiny(a2 - b2)) || (IsTiny(a1 - b2) && IsTiny(a2 - b1));
 }
@@ -36,70 +46,6 @@ int isSetsEqual(double a1, double a2, double b1, double b2)
 int IsClose(double a, double b)
 {
     return IsTiny(a - b);
-}
-
-int AssertEqualX(double given, double expected)
-{
-    if(Assert(IsClose(expected, given)))
-        printf("[x] %lg expected, but %lg was given!\n", expected, given);
-}
-
-int AssertEqualRootsCount(RootsCount given, RootsCount expected)
-{
-    if(Assert(expected == given))
-        printf("[roots count] %i expected, but were %i!\n", expected, given);
-}
-
-int AssertEqualXs(double given1, double given2, double expected1, double expected2)
-{
-    if(Assert((IsTiny(given1 - expected1) && IsTiny(given2 - expected2)) || (IsTiny(given1 - expected2) && IsTiny(given2 - expected1))))
-        printf("[{x1, x2}] {%lg, %lg} expected, but {%lg, %lg} was given!\n", expected1, expected2, given1, given2);
-}
-
-void SolveEquationTest1()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(0, 0, 1, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::No);
-}
-
-void SolveEquationTest2()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(0, 0, 0, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::Infinity);
-}
-
-void SolveEquationTest3()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(0, 5, 25, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::One);
-    AssertEqualX(x1, -5);
-}
-
-void SolveEquationTest4()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(1, 0, -36, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::Two);
-    AssertEqualXs(x1, x2, -6, 6);
-}
-
-void SolveEquationTest5()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(3, 12, 0, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::Two);
-    AssertEqualXs(x1, x2, 0, -24);
-}
-
-void SolveEquationTest6()
-{
-    double x1 = 0, x2 = 0;
-    RootsCount rootsCount = SolveEquation(10, 6, 0.9, &x1, &x2);
-    AssertEqualRootsCount(rootsCount, RootsCount::One);
-    AssertEqualX(x1, -0.23);
 }
 
 void SolveEquationRandomTest()
@@ -139,15 +85,57 @@ void SolveEquationRandomTest()
     }
 }
 
+void SolveEquationTestArray(TestInfo *tests, int count)
+{
+    for(int i = 0; i < count; i++)
+    {
+        TestInfo test = tests[i];
+        double x1 = 0, x2 = 0;
+        RootsCount rootsCount = SolveEquation(test.A, test.B, test.C, &x1, &x2);
+        printf("Test %i:\n", i);
+        if(!IsTiny(test.A))
+            printf("%lgx^2 + ", test.A);
+        if(!IsTiny(test.B))
+            printf("%lgx + ", test.B);
+        printf("%lg = 0\n", test.C);
+        printf("[roots count] expected %i, given %i\n", test.RootsCount, rootsCount);
+        if(test.RootsCount != rootsCount)
+        {
+            printf("---------------------------------------Result: fail[X]!\n");
+            continue;
+        }
+        switch(test.RootsCount)
+        {
+            case RootsCount::One:
+                printf("[x1] expected %lg, given %lg\n", test.X1, x1);
+                printf("---------------------------------------Result: %s!\n", IsClose(test.X1, x1) ? "success[V]" : "fail[X]");
+                break;
+            case RootsCount::Two:
+                printf("[x1] expected %lg, given %lg\n", test.X1, x1);
+                printf("[x2] expected %lg, given %lg\n", test.X2, x2);
+                printf("---------------------------------------Result: %s!\n", IsSetsEqual(test.X1, test.X2, x1, x2) ? "success[V]" : "fail[X]");
+                break;
+            default:
+                printf("---------------------------------------Result: success[V]!\n");
+                break;
+        }
+    }
+}
+
 int main()
 {
-    Run(SolveEquationTest1);
-    Run(SolveEquationTest2);
-    Run(SolveEquationTest3);
-    Run(SolveEquationTest4);
-    Run(SolveEquationTest5);
-    Run(SolveEquationTest6);
+    printf("Standart tests:\n");
+    TestInfo tests[] = { 
+    {0, 0, 1,    RootsCount::No, 0, 0}, 
+    {0, 0, 0,    RootsCount::Infinity, 0, 0}, 
+    {0, 5, 25,   RootsCount::One, -15, 0},
+    {1, 0, -36,  RootsCount::Two, 6, -6}, 
+    {3, 12, 0,   RootsCount::Two, 0, -4}, 
+    {10, 6, 0.9, RootsCount::One, -0.3, 0}
+    };
+    SolveEquationTestArray(tests, 6);
 
+    printf("Random tests:\n");
     srand(time(NULL));
     for(int i = 0; i < 15; i++)
         Run(SolveEquationRandomTest);

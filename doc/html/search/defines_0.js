@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['infinity_5froots_0',['INFINITY_ROOTS',['../proj_8cpp.html#a928b8c37ec9c63bf66055ebc62e64b9d',1,'proj.cpp']]]
+  ['big_5fepsilon_0',['BIG_EPSILON',['../equations_8cpp.html#a763d2cd8e54a0ca42de4d8adc2da7714',1,'equations.cpp']]]
 ];

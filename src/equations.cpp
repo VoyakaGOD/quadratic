@@ -7,7 +7,7 @@
 
 int IsTiny(double num)
 {
-    return (-BIG_EPSILON < num) && (num < BIG_EPSILON);
+    return abs(num) < BIG_EPSILON;
 }
 
 RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2)
