@@ -1,47 +1,29 @@
-#include "equations.hpp"
 #include "IOLib.hpp"
-#include <iostream>
-#include <stdlib.h>
 #include <time.h>
 
-int NumberOfTest = 1;
-int IsTestFailed = 0;
+#define TEST_ASSERT(condition) if(!(condition)) *__success = 0;
+
+#define PRINT(...) printf(__VA_ARGS__); if(LogFile != NULL) fprintf(LogFile, __VA_ARGS__)
+
+FILE *LogFile = NULL;
 
 /// A,B,C - coefficients of polynomial\n
 /// RootsCount - expected number of roots\n
 /// X1, X2 - expected roots
 typedef struct 
 {
-    double A;
-    double B;
-    double C;
-    RootsCount RootsCount;
-    double X1;
-    double X2;
+    double A = NAN;
+    double B = NAN;
+    double C = NAN;
+    RootsCount RootsCount = RootsCount::No;
+    double X1 = NAN;
+    double X2 = NAN;
 } TestInfo;
-
-/// Rejects the test.
-void Assert(int condition)
-{
-    if(condition)
-        return;
-    IsTestFailed = 1;
-}
 
 /// Cute print of test result.
 void PrintTestResult(int success)
 {
-    printf("---------------------------------------Result: %s!\n", success ?  "success[V]" : "fail[X]");
-}
-
-/// Run the test and show result.
-void Run(void (*test)())
-{
-    IsTestFailed = 0;
-    printf("test %i: start!\n", NumberOfTest);
-    test();
-    PrintTestResult(!IsTestFailed);
-    NumberOfTest++;
+    PRINT("---------------------------------------Result: %s!\n", success ?  "success[V]" : "fail[X]");
 }
 
 /// Compare A{a1, a2} and B{b1, b2} without order.
@@ -57,7 +39,7 @@ int IsClose(double a, double b)
 }
 
 /// Test SolveEquation function with random parameters.
-void SolveEquationRandomTest()
+void SolveEquationRandomTest(int *__success)
 {
     double a = rand() % 2001 - 1000;
     double b = rand() % 2001 - 1000;
@@ -71,34 +53,34 @@ void SolveEquationRandomTest()
     {
         case RootsCount::No:
         {
-            Assert(discriminant < 0);
+            TEST_ASSERT(discriminant < 0);
             break;
         }
         case RootsCount::One:
         {    
-            Assert(IsTiny(discriminant));
-            Assert(IsTiny(a*x1*x1 + b*x1 + c));
+            TEST_ASSERT(IsTiny(discriminant));
+            TEST_ASSERT(IsTiny(a*x1*x1 + b*x1 + c));
             break;
         }
         case RootsCount::Two:
         {
-            Assert(discriminant > 0);
-            Assert(IsTiny(a*x1*x1 + b*x1 + c));
-            Assert(IsTiny(a*x2*x2 + b*x2 + c));
+            TEST_ASSERT(discriminant > 0);
+            TEST_ASSERT(IsTiny(a*x1*x1 + b*x1 + c));
+            TEST_ASSERT(IsTiny(a*x2*x2 + b*x2 + c));
             break;
         }
         case RootsCount::Infinity:
         {
-            Assert(IsTiny(a) && IsTiny(a) && IsTiny(c));
+            TEST_ASSERT(IsTiny(a) && IsTiny(a) && IsTiny(c));
             break;
         }
     }
 
-    if(IsTestFailed)
+    if(!(*__success))
     {
-        printf("%lgx^2 + %lgx + %lg = 0", a, b, c);
-        printf("x1 = %lg", x1);
-        printf("x2 = %lg", x2);
+        PRINT("%lgx^2 + %lgx + %lg = 0", a, b, c);
+        PRINT("x1 = %lg", x1);
+        PRINT("x2 = %lg", x2);
     }
 }
 
@@ -111,9 +93,9 @@ void SolveEquationTestArray(TestInfo *tests, int count)
         double x1 = 0, x2 = 0;
         RootsCount rootsCount = SolveEquation(test.A, test.B, test.C, &x1, &x2);
 
-        printf("Test %i:\n", i);
+        PRINT("Test %i:\n", i);
         DisplayEquation(test.A, test.B, test.C);
-        printf("[roots count] expected %i, given %i\n", test.RootsCount, rootsCount);
+        PRINT("[roots count] expected %i, given %i\n", test.RootsCount, rootsCount);
         
         if(test.RootsCount != rootsCount)
         {
@@ -125,13 +107,13 @@ void SolveEquationTestArray(TestInfo *tests, int count)
         {
             case RootsCount::One:
             {
-                printf("[x1] expected %lg, given %lg\n", test.X1, x1);
+                PRINT("[x1] expected %lg, given %lg\n", test.X1, x1);
                 PrintTestResult(IsClose(test.X1, x1));
                 break;
             }
             case RootsCount::Two:
             {
-                printf("[x1 x2] expected %lg %lg, given %lg %lg\n", test.X1, test.X2, x1, x2);
+                PRINT("[x1 x2] expected %lg %lg, given %lg %lg\n", test.X1, test.X2, x1, x2);
                 PrintTestResult(IsSetsEqual(test.X1, test.X2, x1, x2));
                 break;
             }
@@ -144,23 +126,38 @@ void SolveEquationTestArray(TestInfo *tests, int count)
     }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-    printf("Standart tests:\n");
+    if (argc == 2)
+    {
+        LogFile = fopen(argv[1], "w");
+    }
+
+    PRINT("Standart tests:\n");
     TestInfo tests[] = { 
         {0, 0, 1,    RootsCount::No, 0, 0}, 
         {0, 0, 0,    RootsCount::Infinity, 0, 0}, 
         {0, 5, 25,   RootsCount::One, -5, 0},
-        {1, 0, -36,  RootsCount::Two, 60, -6}, 
+        {1, 0, -36,  RootsCount::Two, 6, -6}, 
         {3, 12, 0,   RootsCount::Two, 0, -4}, 
         {10, 6, 0.9, RootsCount::One, -0.3, 0}
     };
     SolveEquationTestArray(tests, 6);
 
-    printf("Random tests:\n");
+    PRINT("Random tests:\n");
     srand(time(NULL));
     for(int i = 0; i < 15; i++)
-        Run(SolveEquationRandomTest);
+    {
+        int success = 1;
+        PRINT("test %d: start!\n", i);
+        SolveEquationRandomTest(&success);
+        PrintTestResult(success);
+    }
+
+    if(LogFile != NULL)
+    {
+        fclose(LogFile);
+    }
     
     getchar();
 }

@@ -1,11 +1,12 @@
 #ifndef IOLIB_HEADER
 #define IOLIB_HEADER
 
+#include <string.h>
+#include "my_assert.hpp"
 #include "equations.hpp"
-#include <stdio.h>
 
-/// Check is the string contains only digits and dot.
-int IsDigit(char *string);
+/// Check is the string contains only digits, dot and maybe sign.
+int IsDouble(char *string);
 
 /// Input the coeffitients values from file.
 /// @param[in] file file from which we get data
@@ -19,6 +20,12 @@ void InputCoefficientsFromFile(FILE* file, double *a, double *b, double *c);
 /// @param[out] b second coefficient
 /// @param[out] c third coefficient
 void InputCoefficientsFromStdin(double *a, double *b, double *c);
+
+/// Input coefficients taking into account command line args count and values.
+/// If 2 args, then read data from file.
+/// If 4 args, then read data from args.
+/// Otherwise read data from stdin.
+void InputCoefficients(double *a, double *b, double *c, int argc, char* argv[]);
 
 /// Cute display of roots.
 void DisplayRoots(RootsCount rootsCount, double x1, double x2);

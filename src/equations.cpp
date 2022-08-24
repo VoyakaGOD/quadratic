@@ -1,16 +1,16 @@
 #include "equations.hpp"
 #include "my_assert.hpp"
-#include <math.h>
-
-#define BIG_EPSILON 1e-7
 
 int IsTiny(double num)
 {
-    return abs(num) < BIG_EPSILON;
+    return abs(num) < 1e-7;
 }
 
 RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2)
 {
+	assert(!isnan(a));
+	assert(!isnan(b));
+	assert(!isnan(c));
 	assert(isfinite(a));
 	assert(isfinite(b));
 	assert(isfinite(c));
@@ -26,6 +26,12 @@ RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2)
 
 RootsCount SolveLinearEquation(double a, double b, double *x)
 {
+	assert(!isnan(a));
+	assert(!isnan(b));
+	assert(isfinite(a));
+	assert(isfinite(b));
+	assert(x != NULL);
+
     if(IsTiny(a))
 		return IsTiny(b) ? RootsCount::Infinity : RootsCount::No;
 	*x = -b/a;
@@ -34,6 +40,15 @@ RootsCount SolveLinearEquation(double a, double b, double *x)
 
 RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, double *x2)
 {
+	assert(!isnan(a));
+	assert(!isnan(b));
+	assert(!isnan(c));
+	assert(isfinite(a));
+	assert(isfinite(b));
+	assert(isfinite(c));
+	assert(x1 != NULL);
+	assert(x2 != NULL);
+	assert(x1 != x2);
     assert(!IsTiny(a));
 
     if (IsTiny(c))

@@ -1,16 +1,23 @@
 #include "IOLib.hpp"
-#include <iostream>
-#include "my_assert.hpp"
 
-int IsDigit(char *string)
+int IsDouble(char *string)
 {
 	assert(string != NULL);
 
 	if (string[0] == 0)
 		return 0;
 	
+	
+	int i = 0;
+	if (string[0] == '-')
+	{
+		if (string[1] == 0)
+			return 0;
+		i = 1;
+	}
+
 	int dot = 0;
-	for(int i = 0; string[i]; i++)
+	for(; string[i]; i++)
 	{
 		if (string[i] < '0' || string[i] > '9')
 		{
@@ -51,6 +58,47 @@ void InputCoefficientsFromStdin(double *a, double *b, double *c)
 		break;
 		
 		printf("Incorrect input data!\n");
+	}
+}
+
+void InputCoefficients(double *a, double *b, double *c, int argc, char* argv[])
+{
+	switch(argc)
+	{
+		case 1:
+		{
+			InputCoefficientsFromStdin(a, b, c);
+			break;
+		}
+		case 2:
+		{
+			FILE *file;
+			if ((file = fopen(argv[1], "r")) == NULL)
+			{
+				printf("Incorrect file!");
+				WaitChar();
+				return;
+			}
+			InputCoefficientsFromFile(file, a, b, c);
+			fclose(file);
+			break;
+		}
+		case 4:
+		{
+			assert(IsDouble(argv[1]));
+			assert(IsDouble(argv[2]));
+			assert(IsDouble(argv[3]));
+
+			*a = atof(argv[1]);
+			*b = atof(argv[2]);
+			*c = atof(argv[3]);
+			break;
+		}
+		default:
+		{
+			printf("Incrorrect args count!");
+			break;
+		}
 	}
 }
 

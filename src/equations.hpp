@@ -1,12 +1,14 @@
 #ifndef EQUATIONS_HEADER
 #define EQUATIONS_HEADER
 
+#include <math.h>
+
 typedef enum 
 {
-    No,
-    One,
-    Two,
-    Infinity
+    No = 0,
+    One = 1,
+    Two = 2,
+    Infinity = 404
 } RootsCount;
 
 /// Solve equation: ax^2 + bx + c = 0

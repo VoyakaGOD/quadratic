@@ -1,0 +1,54 @@
+Standart tests:
+Test 0:
+[roots count] expected 0, given 0
+---------------------------------------Result: success[V]!
+Test 1:
+[roots count] expected 404, given 404
+---------------------------------------Result: success[V]!
+Test 2:
+[roots count] expected 1, given 1
+[x1] expected -5, given -5
+---------------------------------------Result: success[V]!
+Test 3:
+[roots count] expected 2, given 2
+[x1 x2] expected 6 -6, given 6 -6
+---------------------------------------Result: success[V]!
+Test 4:
+[roots count] expected 2, given 2
+[x1 x2] expected 0 -4, given 0 -4
+---------------------------------------Result: success[V]!
+Test 5:
+[roots count] expected 1, given 1
+[x1] expected -0.3, given -0.3
+---------------------------------------Result: success[V]!
+Random tests:
+test 0: start!
+---------------------------------------Result: success[V]!
+test 1: start!
+---------------------------------------Result: success[V]!
+test 2: start!
+---------------------------------------Result: success[V]!
+test 3: start!
+---------------------------------------Result: success[V]!
+test 4: start!
+---------------------------------------Result: success[V]!
+test 5: start!
+---------------------------------------Result: success[V]!
+test 6: start!
+---------------------------------------Result: success[V]!
+test 7: start!
+---------------------------------------Result: success[V]!
+test 8: start!
+---------------------------------------Result: success[V]!
+test 9: start!
+---------------------------------------Result: success[V]!
+test 10: start!
+---------------------------------------Result: success[V]!
+test 11: start!
+---------------------------------------Result: success[V]!
+test 12: start!
+---------------------------------------Result: success[V]!
+test 13: start!
+---------------------------------------Result: success[V]!
+test 14: start!
+---------------------------------------Result: success[V]!
