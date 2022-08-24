@@ -7,8 +7,8 @@
 int NumberOfTest = 1;
 int IsTestFailed = 0;
 
-/// A,B,C - coefficients of polynomial
-/// RootsCount - expected number of roots
+/// A,B,C - coefficients of polynomial\n
+/// RootsCount - expected number of roots\n
 /// X1, X2 - expected roots
 typedef struct 
 {
@@ -28,6 +28,7 @@ void Assert(int condition)
     IsTestFailed = 1;
 }
 
+/// Cute print of test result.
 void PrintTestResult(int success)
 {
     printf("---------------------------------------Result: %s!\n", success ?  "success[V]" : "fail[X]");
@@ -55,6 +56,7 @@ int IsClose(double a, double b)
     return IsTiny(a - b);
 }
 
+/// Test SolveEquation function with random parameters.
 void SolveEquationRandomTest()
 {
     double a = rand() % 2001 - 1000;
@@ -100,7 +102,7 @@ void SolveEquationRandomTest()
     }
 }
 
-/// Run test for each element of tests.
+/// Test SolveEquation function with parameters specified by TestInfo for each element of tests array.
 void SolveEquationTestArray(TestInfo *tests, int count)
 {
     for(int i = 0; i < count; i++)
@@ -149,7 +151,7 @@ int main()
         {0, 0, 1,    RootsCount::No, 0, 0}, 
         {0, 0, 0,    RootsCount::Infinity, 0, 0}, 
         {0, 5, 25,   RootsCount::One, -5, 0},
-        {1, 0, -36,  RootsCount::Two, 6, -6}, 
+        {1, 0, -36,  RootsCount::Two, 60, -6}, 
         {3, 12, 0,   RootsCount::Two, 0, -4}, 
         {10, 6, 0.9, RootsCount::One, -0.3, 0}
     };

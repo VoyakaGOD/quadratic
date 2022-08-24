@@ -2,6 +2,27 @@
 #include <iostream>
 #include "my_assert.hpp"
 
+int IsDigit(char *string)
+{
+	assert(string != NULL);
+
+	if (string[0] == 0)
+		return 0;
+	
+	int dot = 0;
+	for(int i = 0; string[i]; i++)
+	{
+		if (string[i] < '0' || string[i] > '9')
+		{
+			if(dot || string[i] != '.')
+				return 0;
+			else
+				dot = 1;
+		}
+	}
+	return 1;
+}
+
 void InputCoefficientsFromFile(FILE* file, double *a, double *b, double *c)
 {
 	assert(file != NULL);
@@ -9,9 +30,10 @@ void InputCoefficientsFromFile(FILE* file, double *a, double *b, double *c)
 	assert(b != NULL);
 	assert(c != NULL);
 
-	assert(fscanf(file, "%lg", a) != 0);
-	assert(fscanf(file, "%lg", b) != 0);
-	assert(fscanf(file, "%lg", c) != 0);
+	assert(fscanf(file, "%lg", a) > 0);
+	assert(fscanf(file, "%lg", b) > 0);
+	assert(fscanf(file, "%lg", c) > 0);
+	assert(getc(file) == EOF);
 }
 
 void InputCoefficientsFromStdin(double *a, double *b, double *c)

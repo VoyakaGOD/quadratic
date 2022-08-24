@@ -2,8 +2,21 @@
 /// \brief It's main file!
 
 #include "equations.hpp"
+#include "my_assert.hpp"
+#include <iostream>
 #include "IOLib.hpp"
 #include <stdlib.h>
+
+
+int strcmp(char *left, const char *right)
+{
+	for(int i = 0; left[i] && right[i]; i++)
+	{
+		if(left[i] != right[i])
+			return 0;
+	}
+	return 1;
+}
 
 /// Input coefficients taking into account args count and values.
 /// If 2 args, then read data from file.
@@ -13,21 +26,39 @@ void InputCoefficients(double *a, double *b, double *c, int argc, char* argv[])
 {
 	switch(argc)
 	{
+		case 1:
+		{
+			InputCoefficientsFromStdin(a, b, c);
+			break;
+		}
 		case 2:
 		{
-			FILE *file;
-			if ((file = fopen(argv[1], "r")) == NULL)
+			if (strcmp(argv[1], "--help"))
 			{
-				printf("Incorrect file!");
-				WaitChar();
-				return;
+				printf("Possible args:\n");
+				printf("[filename] - read data from file\n");
+				printf("[a] [b] [c] - explicitly sets coefficients\n");
 			}
-			InputCoefficientsFromFile(file, a, b, c);
-			fclose(file);
+			else
+			{
+				FILE *file;
+				if ((file = fopen(argv[1], "r")) == NULL)
+				{
+					printf("Incorrect file!");
+					WaitChar();
+					return;
+				}
+				InputCoefficientsFromFile(file, a, b, c);
+				fclose(file);
+			}
 			break;
 		}
 		case 4:
 		{
+			assert(IsDigit(argv[1]));
+			assert(IsDigit(argv[2]));
+			assert(IsDigit(argv[3]));
+
 			*a = atof(argv[1]);
 			*b = atof(argv[2]);
 			*c = atof(argv[3]);
@@ -35,7 +66,7 @@ void InputCoefficients(double *a, double *b, double *c, int argc, char* argv[])
 		}
 		default:
 		{
-			InputCoefficientsFromStdin(a, b, c);
+			printf("Incrorrect args count!");
 			break;
 		}
 	}

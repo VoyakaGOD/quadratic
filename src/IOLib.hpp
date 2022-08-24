@@ -4,6 +4,9 @@
 #include "equations.hpp"
 #include <stdio.h>
 
+/// Check is the string contains only digits and dot.
+int IsDigit(char *string);
+
 /// Input the coeffitients values from file.
 /// @param[in] file file from which we get data
 /// @param[out] a first coefficient
