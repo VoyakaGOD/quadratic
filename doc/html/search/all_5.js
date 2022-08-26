@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['infinity_0',['Infinity',['../equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3aa9b91d05d6780a67093e34598646f7e3',1,'equations.hpp']]],
+  ['inf_5froots_0',['INF_ROOTS',['../equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a5a79e9e49077da58fe5d46a98f0b5e36',1,'equations.hpp']]],
   ['inputcoefficients_1',['InputCoefficients',['../_i_o_lib_8cpp.html#a91a473b2ae13f63023e5c5d93113a2cd',1,'InputCoefficients(double *a, double *b, double *c, int argc, char *argv[]):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#a91a473b2ae13f63023e5c5d93113a2cd',1,'InputCoefficients(double *a, double *b, double *c, int argc, char *argv[]):&#160;IOLib.cpp']]],
   ['inputcoefficientsfromfile_2',['InputCoefficientsFromFile',['../_i_o_lib_8cpp.html#a09840ca379cbceebc9f590d9323a0501',1,'InputCoefficientsFromFile(FILE *file, double *a, double *b, double *c):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#a09840ca379cbceebc9f590d9323a0501',1,'InputCoefficientsFromFile(FILE *file, double *a, double *b, double *c):&#160;IOLib.cpp']]],
   ['inputcoefficientsfromstdin_3',['InputCoefficientsFromStdin',['../_i_o_lib_8cpp.html#a77b266ec3d573f9a0a4d2e6638ad972b',1,'InputCoefficientsFromStdin(double *a, double *b, double *c):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#a77b266ec3d573f9a0a4d2e6638ad972b',1,'InputCoefficientsFromStdin(double *a, double *b, double *c):&#160;IOLib.cpp']]],

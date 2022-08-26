@@ -69,7 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">equations.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -79,10 +80,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aa25c6d8cdf0bee88e27388ccef3dcdc3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a> { <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a996e257033c09daf66076efc1ebd3b1c">No</a> = 0
-, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3ad4e07130bf8ac301c327f0e64bc2d292">One</a> = 1
-, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a8f23576efb89e6d93059e33057415b06">Two</a> = 2
-, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3aa9b91d05d6780a67093e34598646f7e3">Infinity</a> = 404
+<tr class="memitem:aa25c6d8cdf0bee88e27388ccef3dcdc3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a> { <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a> = 0
+, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a> = 1
+, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a> = 2
+, <a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3a5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a> = 404
  }</td></tr>
 <tr class="separator:aa25c6d8cdf0bee88e27388ccef3dcdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -97,6 +98,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a43eaa13fdc1254703a85d0836f265acb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8hpp.html#a43eaa13fdc1254703a85d0836f265acb">IsTiny</a> (double num)</td></tr>
 <tr class="memdesc:a43eaa13fdc1254703a85d0836f265acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check is |num| is less than 1e-7.  <a href="equations_8hpp.html#a43eaa13fdc1254703a85d0836f265acb">More...</a><br /></td></tr>
 <tr class="separator:a43eaa13fdc1254703a85d0836f265acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac390258e15aa8488ca359a6bde016930"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8hpp.html#ac390258e15aa8488ca359a6bde016930">double_epsilon</a> = 1e-7</td></tr>
+<tr class="separator:ac390258e15aa8488ca359a6bde016930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="aa25c6d8cdf0bee88e27388ccef3dcdc3" name="aa25c6d8cdf0bee88e27388ccef3dcdc3"></a>
@@ -111,10 +117,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3a996e257033c09daf66076efc1ebd3b1c" name="aa25c6d8cdf0bee88e27388ccef3dcdc3a996e257033c09daf66076efc1ebd3b1c"></a>No&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3ad4e07130bf8ac301c327f0e64bc2d292" name="aa25c6d8cdf0bee88e27388ccef3dcdc3ad4e07130bf8ac301c327f0e64bc2d292"></a>One&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3a8f23576efb89e6d93059e33057415b06" name="aa25c6d8cdf0bee88e27388ccef3dcdc3a8f23576efb89e6d93059e33057415b06"></a>Two&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3aa9b91d05d6780a67093e34598646f7e3" name="aa25c6d8cdf0bee88e27388ccef3dcdc3aa9b91d05d6780a67093e34598646f7e3"></a>Infinity&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3ab9a321da349ac1355b717745736ad90c" name="aa25c6d8cdf0bee88e27388ccef3dcdc3ab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3a6700c0f6efd23571cb22aefd2510b1cf" name="aa25c6d8cdf0bee88e27388ccef3dcdc3a6700c0f6efd23571cb22aefd2510b1cf"></a>ONE_ROOT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3a876622d3c0b008da13a3685c64714e81" name="aa25c6d8cdf0bee88e27388ccef3dcdc3a876622d3c0b008da13a3685c64714e81"></a>TWO_ROOTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa25c6d8cdf0bee88e27388ccef3dcdc3a5a79e9e49077da58fe5d46a98f0b5e36" name="aa25c6d8cdf0bee88e27388ccef3dcdc3a5a79e9e49077da58fe5d46a98f0b5e36"></a>INF_ROOTS&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -276,6 +282,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Solve equation: ax^2 + bx + c = 0 Where a is not equal to zero! </p><dl class="section return"><dt>Returns</dt><dd>number of roots </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac390258e15aa8488ca359a6bde016930" name="ac390258e15aa8488ca359a6bde016930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac390258e15aa8488ca359a6bde016930">&#9670;&nbsp;</a></span>double_epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double double_epsilon = 1e-7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
