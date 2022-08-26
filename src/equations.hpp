@@ -3,12 +3,14 @@
 
 #include <math.h>
 
+const double double_epsilon = 1e-7;
+
 typedef enum 
 {
-    No = 0,
-    One = 1,
-    Two = 2,
-    Infinity = 404
+    NO_ROOTS = 0,
+    ONE_ROOT = 1,
+    TWO_ROOTS = 2,
+    INF_ROOTS = 404
 } RootsCount;
 
 /// Solve equation: ax^2 + bx + c = 0

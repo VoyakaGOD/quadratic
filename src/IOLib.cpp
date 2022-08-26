@@ -4,14 +4,13 @@ int IsDouble(char *string)
 {
 	assert(string != NULL);
 
-	if (string[0] == 0)
+	if (string[0] == '\0')
 		return 0;
-	
 	
 	int i = 0;
 	if (string[0] == '-')
 	{
-		if (string[1] == 0)
+		if (string[1] == '\0')
 			return 0;
 		i = 1;
 	}
@@ -73,12 +72,12 @@ void InputCoefficients(double *a, double *b, double *c, int argc, char* argv[])
 		}
 		case 2:
 		{
-			FILE *file;
+			FILE *file = NULL;
 			if ((file = fopen(argv[1], "r")) == NULL)
 			{
 				printf("Incorrect file!");
 				WaitChar();
-				return;
+				abort();
 			}
 			InputCoefficientsFromFile(file, a, b, c);
 			fclose(file);
@@ -107,22 +106,22 @@ void DisplayRoots(RootsCount rootsCount, double x1, double x2)
 {
 	switch(rootsCount)
 	{
-		case No:
+		case NO_ROOTS:
 		{
 			printf("The quadratic has no roots!");
 			break;
 		}
-		case One:
+		case ONE_ROOT:
 		{
 			printf("The quadratic has one root: %lg!", x1);
 			break;
 		}
-		case Two:
+		case TWO_ROOTS:
 		{
 			printf("The quadratic has two roots: %lg and %lg!", x1, x2);
 			break;
 		}
-		case Infinity:
+		case INF_ROOTS:
 		{
 			printf("The quadratic has infinity number of roots!");
 			break;

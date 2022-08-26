@@ -48,25 +48,25 @@ void SolveEquationRandomTest(int *__success)
     double discriminant = b*b - 4*a*c;
     switch(rootsCount)
     {
-        case No:
+        case NO_ROOTS:
         {
             TEST_ASSERT(discriminant < 0);
             break;
         }
-        case One:
+        case ONE_ROOT:
         {    
             TEST_ASSERT(IsTiny(discriminant));
             TEST_ASSERT(IsTiny(a*x1*x1 + b*x1 + c));
             break;
         }
-        case Two:
+        case TWO_ROOTS:
         {
             TEST_ASSERT(discriminant > 0);
             TEST_ASSERT(IsTiny(a*x1*x1 + b*x1 + c));
             TEST_ASSERT(IsTiny(a*x2*x2 + b*x2 + c));
             break;
         }
-        case Infinity:
+        case INF_ROOTS:
         {
             TEST_ASSERT(IsTiny(a) && IsTiny(a) && IsTiny(c));
             break;
@@ -104,12 +104,12 @@ void SolveEquationTestArray(TestInfo *tests, int count)
         PRINT("[roots count] expected %i, given %i\n", test.RootsCount, rootsCount);
         switch(test.RootsCount)
         {
-            case One:
+            case ONE_ROOT:
             {
                 PRINT("[x1] expected %lg, given %lg\n", test.X1, x1);
                 break;
             }
-            case Two:
+            case TWO_ROOTS:
             {
                 PRINT("[x1 x2] expected %lg %lg, given %lg %lg\n", test.X1, test.X2, x1, x2);
                 break;
@@ -126,12 +126,12 @@ int main(int argc, char* argv[])
 
     PRINT("Standart tests:\n");
     TestInfo tests[] = { 
-        {0,  0,  1,    No,       NAN,    NAN}, 
-        {0,  0,  0,    Infinity, NAN,    NAN}, 
-        {0,  5,  25,   One,      -5,   NAN},
-        {1,  0,  -36,  Two,      6,    -6}, 
-        {3,  12, 0,    Two,      0,    -4}, 
-        {10, 6,  0.9,  One,      -0.3, NAN}
+        {0,  0,  1,    NO_ROOTS,    NAN,    NAN}, 
+        {0,  0,  0,    INF_ROOTS,   NAN,    NAN}, 
+        {0,  5,  25,   ONE_ROOT,    -5,   NAN},
+        {1,  0,  -36,  TWO_ROOTS,   6,    -6}, 
+        {3,  12, 0,    TWO_ROOTS,   0,    -4}, 
+        {10, 6,  0.9,  ONE_ROOT,    -0.3, NAN}
     };
     SolveEquationTestArray(tests, 6);
 

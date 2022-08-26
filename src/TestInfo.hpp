@@ -11,7 +11,7 @@ typedef struct
     double A = NAN;
     double B = NAN;
     double C = NAN;
-    RootsCount RootsCount = No;
+    RootsCount RootsCount = NO_ROOTS;
     double X1 = NAN;
     double X2 = NAN;
 } TestInfo;

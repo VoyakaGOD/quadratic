@@ -3,7 +3,7 @@
 
 int IsTiny(double num)
 {
-    return abs(num) < 1e-7;
+    return fabs(num) < double_epsilon;
 }
 
 RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2)
@@ -33,9 +33,9 @@ RootsCount SolveLinearEquation(double a, double b, double *x)
 	assert(x != NULL);
 
     if(IsTiny(a))
-		return IsTiny(b) ? Infinity : No;
+		return IsTiny(b) ? INF_ROOTS : NO_ROOTS;
 	*x = -b/a;
-	return One;
+	return ONE_ROOT;
 }
 
 RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, double *x2)
@@ -55,23 +55,23 @@ RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, doub
 	{
 		*x1 = 0;
 		*x2 = -b/a;
-		return (IsTiny(b)) ? One : Two;
+		return (IsTiny(b)) ? ONE_ROOT : TWO_ROOTS;
     }
 
 	double D = b*b - 4*a*c;
 	if (IsTiny(D))
 	{
 		*x1 = -0.5 * b / a;
-		return One;
+		return ONE_ROOT;
 	}
 	if (D < 0)
 	{
-		return No;
+		return NO_ROOTS;
 	}
 	
 	double sqrtD = sqrt(D);
 	double denominator = 1 / (2*a);
 	*x1 = denominator * (-b + sqrtD);
 	*x2 = denominator * (-b - sqrtD);
-	return Two;
+	return TWO_ROOTS;
 }
