@@ -15,3 +15,7 @@ Quadratic is console program that solve quadratic equations.This project is crea
 
 3)Enter file name as comand line argument.
 ![third_mode](third_mode.png)
+
+//make files
+//github
+//edit readme
