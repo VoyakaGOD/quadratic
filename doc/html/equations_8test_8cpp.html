@@ -68,41 +68,33 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">equations.test.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_i_o_lib_8hpp_source.html">IOLib.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_test_info_8hpp_source.html">TestInfo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_test_lib_8hpp_source.html">TestLib.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_o_lib_8hpp_source.html">IOLib.hpp</a>&quot;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_test_info.html">TestInfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ae0a72bc174ac97e90c4a711e5e52d540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ae0a72bc174ac97e90c4a711e5e52d540">TEST_ASSERT</a>(condition)&#160;&#160;&#160;if(!(condition)) *__success = 0;</td></tr>
 <tr class="separator:ae0a72bc174ac97e90c4a711e5e52d540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15bb631053a1fce9c5470701900984c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(...)&#160;&#160;&#160;printf(__VA_ARGS__); if(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> != NULL) fprintf(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a>, __VA_ARGS__)</td></tr>
-<tr class="separator:a15bb631053a1fce9c5470701900984c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a809aea9368f1939ac0c0218343e15216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216">PrintTestResult</a> (int success)</td></tr>
-<tr class="memdesc:a809aea9368f1939ac0c0218343e15216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cute print of test result.  <a href="equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216">More...</a><br /></td></tr>
-<tr class="separator:a809aea9368f1939ac0c0218343e15216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06a56117221a54475a01c35730c3f833"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a06a56117221a54475a01c35730c3f833">IsSetsEqual</a> (double a1, double a2, double b1, double b2)</td></tr>
-<tr class="memdesc:a06a56117221a54475a01c35730c3f833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare A{a1, a2} and B{b1, b2} without order.  <a href="equations_8test_8cpp.html#a06a56117221a54475a01c35730c3f833">More...</a><br /></td></tr>
-<tr class="separator:a06a56117221a54475a01c35730c3f833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b688dd5c393530c0eb8ffe3bf13e51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ac5b688dd5c393530c0eb8ffe3bf13e51">CompareRoots</a> (double expected, double given)</td></tr>
+<tr class="memdesc:ac5b688dd5c393530c0eb8ffe3bf13e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare roots taken in account NAN values.  <a href="equations_8test_8cpp.html#ac5b688dd5c393530c0eb8ffe3bf13e51">More...</a><br /></td></tr>
+<tr class="separator:ac5b688dd5c393530c0eb8ffe3bf13e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1750200859061327605de0a586fe2b75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a1750200859061327605de0a586fe2b75">IsRootsEqual</a> (double e1, double e2, double g1, double g2)</td></tr>
+<tr class="separator:a1750200859061327605de0a586fe2b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9">IsClose</a> (double a, double b)</td></tr>
-<tr class="memdesc:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is difference between a and b is tiny.  <a href="equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9">More...</a><br /></td></tr>
+<tr class="memdesc:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is difference between a and b is less than 1e-7.  <a href="equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9">More...</a><br /></td></tr>
 <tr class="separator:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba334b074e34fbe5373f5ed2a3f0efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#afba334b074e34fbe5373f5ed2a3f0efa">SolveEquationRandomTest</a> (int *__success)</td></tr>
-<tr class="memdesc:afba334b074e34fbe5373f5ed2a3f0efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test SolveEquation function with random parameters.  <a href="equations_8test_8cpp.html#afba334b074e34fbe5373f5ed2a3f0efa">More...</a><br /></td></tr>
 <tr class="separator:afba334b074e34fbe5373f5ed2a3f0efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ab364bb9f6c3676ca1e522ab3229cf9c0">SolveEquationTestArray</a> (<a class="el" href="struct_test_info.html">TestInfo</a> *tests, int count)</td></tr>
 <tr class="memdesc:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test SolveEquation function with parameters specified by <a class="el" href="struct_test_info.html">TestInfo</a> for each element of tests array.  <a href="equations_8test_8cpp.html#ab364bb9f6c3676ca1e522ab3229cf9c0">More...</a><br /></td></tr>
@@ -112,28 +104,10 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a927459878a7530ff5847e74e8ece5765"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> = NULL</td></tr>
-<tr class="separator:a927459878a7530ff5847e74e8ece5765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dffdd898ee5afd9b186409dda026349"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a1dffdd898ee5afd9b186409dda026349">RandomTestCount</a> = 15</td></tr>
+<tr class="separator:a1dffdd898ee5afd9b186409dda026349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a15bb631053a1fce9c5470701900984c7" name="a15bb631053a1fce9c5470701900984c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15bb631053a1fce9c5470701900984c7">&#9670;&nbsp;</a></span>PRINT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PRINT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;printf(__VA_ARGS__); if(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> != NULL) fprintf(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a>, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae0a72bc174ac97e90c4a711e5e52d540" name="ae0a72bc174ac97e90c4a711e5e52d540"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0a72bc174ac97e90c4a711e5e52d540">&#9670;&nbsp;</a></span>TEST_ASSERT</h2>
 
@@ -153,6 +127,36 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ac5b688dd5c393530c0eb8ffe3bf13e51" name="ac5b688dd5c393530c0eb8ffe3bf13e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b688dd5c393530c0eb8ffe3bf13e51">&#9670;&nbsp;</a></span>CompareRoots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CompareRoots </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>given</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare roots taken in account NAN values. </p>
+
+</div>
+</div>
 <a id="abdd33bb9ebb5e006f4996308d4cb6bb9" name="abdd33bb9ebb5e006f4996308d4cb6bb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abdd33bb9ebb5e006f4996308d4cb6bb9">&#9670;&nbsp;</a></span>IsClose()</h2>
 
@@ -179,39 +183,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Is difference between a and b is tiny. </p>
+<p>Is difference between a and b is less than 1e-7. </p>
 
 </div>
 </div>
-<a id="a06a56117221a54475a01c35730c3f833" name="a06a56117221a54475a01c35730c3f833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06a56117221a54475a01c35730c3f833">&#9670;&nbsp;</a></span>IsSetsEqual()</h2>
+<a id="a1750200859061327605de0a586fe2b75" name="a1750200859061327605de0a586fe2b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1750200859061327605de0a586fe2b75">&#9670;&nbsp;</a></span>IsRootsEqual()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IsSetsEqual </td>
+          <td class="memname">int IsRootsEqual </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a1</em>, </td>
+          <td class="paramname"><em>e1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a2</em>, </td>
+          <td class="paramname"><em>e2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b1</em>, </td>
+          <td class="paramname"><em>g1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b2</em>&#160;</td>
+          <td class="paramname"><em>g2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,8 +224,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Compare A{a1, a2} and B{b1, b2} without order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e1</td><td>first expected root </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e2</td><td>second expected root </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g1</td><td>first given root </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">g2</td><td>second given root </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -253,26 +264,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a809aea9368f1939ac0c0218343e15216" name="a809aea9368f1939ac0c0218343e15216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a809aea9368f1939ac0c0218343e15216">&#9670;&nbsp;</a></span>PrintTestResult()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PrintTestResult </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>success</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cute print of test result. </p>
-
-</div>
-</div>
 <a id="afba334b074e34fbe5373f5ed2a3f0efa" name="afba334b074e34fbe5373f5ed2a3f0efa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afba334b074e34fbe5373f5ed2a3f0efa">&#9670;&nbsp;</a></span>SolveEquationRandomTest()</h2>
 
@@ -288,8 +279,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Test SolveEquation function with random parameters. </p>
+<p >Test SolveEquation function with random parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">__success</td><td>result of the test </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -320,18 +315,25 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Test SolveEquation function with parameters specified by <a class="el" href="struct_test_info.html">TestInfo</a> for each element of tests array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tests</td><td>array of tests </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>the number of test </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a927459878a7530ff5847e74e8ece5765" name="a927459878a7530ff5847e74e8ece5765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927459878a7530ff5847e74e8ece5765">&#9670;&nbsp;</a></span>LogFile</h2>
+<a id="a1dffdd898ee5afd9b186409dda026349" name="a1dffdd898ee5afd9b186409dda026349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dffdd898ee5afd9b186409dda026349">&#9670;&nbsp;</a></span>RandomTestCount</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FILE* LogFile = NULL</td>
+          <td class="memname">const int RandomTestCount = 15</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,23 +1,23 @@
+#include "TestInfo.hpp"
 #include "TestLib.hpp"
 #include "IOLib.hpp"
 #include <time.h>
 
-#define RANDOM_TEST_COUNT 15
-
 #define TEST_ASSERT(condition) if(!(condition)) *__success = 0;
 
-/// A,B,C - coefficients of polynomial\n
-/// RootsCount - expected number of roots\n
-/// X1, X2 - expected roots
-typedef struct 
+const int RandomTestCount = 15;
+
+/// Compare roots taken in account NAN values.
+int CompareRoots(double expected, double given)
 {
-    double A = NAN;
-    double B = NAN;
-    double C = NAN;
-    RootsCount RootsCount = No;
-    double X1 = NAN;
-    double X2 = NAN;
-} TestInfo;
+    if (isnan(expected) && isnan(given))
+        return 1;
+    if (isnan(expected) && !isnan(given))
+        return 0;
+    if (!isnan(expected) && isnan(given))
+        return 0;
+    return IsTiny(expected - given);
+}
 
 /// @param[in] e1 first expected root
 /// @param[in] e2 second expected root
@@ -25,7 +25,7 @@ typedef struct
 /// @param[in] g2 second given root
 int IsRootsEqual(double e1, double e2, double g1, double g2)
 {
-    return (IsTiny(a1 - b1) && IsTiny(a2 - b2)) || (IsTiny(a1 - b2) && IsTiny(a2 - b1));
+    return (CompareRoots(e1, g1) && CompareRoots(e2, g2)) || (CompareRoots(e1, g2) && CompareRoots(e2, g1));
 }
 
 /// Is difference between a and b is less than 1e-7.
@@ -35,6 +35,7 @@ int IsClose(double a, double b)
 }
 
 /// Test SolveEquation function with random parameters.
+/// @param[out] __success result of the test
 void SolveEquationRandomTest(int *__success)
 {
     double a = rand() % 2001 - 1000;
@@ -80,7 +81,9 @@ void SolveEquationRandomTest(int *__success)
     }
 }
 
-/// Test SolveEquation function with parameters specified by TestInfo for each element of tests array.
+/// @brief Test SolveEquation function with parameters specified by TestInfo for each element of tests array.
+/// @param[in] tests array of tests
+/// @param[in] count the number of test
 void SolveEquationTestArray(TestInfo *tests, int count)
 {
     for(int i = 0; i < count; i++)
@@ -134,7 +137,7 @@ int main(int argc, char* argv[])
 
     PRINT("Random tests:\n");
     srand(time(NULL));
-    for(int i = 0; i < RANDOM_TEST_COUNT; i++)
+    for(int i = 0; i < RandomTestCount; i++)
     {
         int success = 1;
         PRINT("test %d: start!\n", i);

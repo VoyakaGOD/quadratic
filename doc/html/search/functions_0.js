@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['displayequation_0',['DisplayEquation',['../_i_o_lib_8cpp.html#a763787b93c48794d3e6d5ae77b59f6eb',1,'DisplayEquation(double a, double b, double c):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#a763787b93c48794d3e6d5ae77b59f6eb',1,'DisplayEquation(double a, double b, double c):&#160;IOLib.cpp']]],
-  ['displayroots_1',['DisplayRoots',['../_i_o_lib_8cpp.html#adf423e8096f85e14175e7ef52f3c7a27',1,'DisplayRoots(RootsCount rootsCount, double x1, double x2):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#adf423e8096f85e14175e7ef52f3c7a27',1,'DisplayRoots(RootsCount rootsCount, double x1, double x2):&#160;IOLib.cpp']]]
+  ['closelogfile_0',['CloseLogFile',['../_test_lib_8cpp.html#abc72fe68abd024cb263115e0afd3160a',1,'CloseLogFile():&#160;TestLib.cpp'],['../_test_lib_8hpp.html#abc72fe68abd024cb263115e0afd3160a',1,'CloseLogFile():&#160;TestLib.cpp']]],
+  ['compareroots_1',['CompareRoots',['../equations_8test_8cpp.html#ac5b688dd5c393530c0eb8ffe3bf13e51',1,'equations.test.cpp']]]
 ];

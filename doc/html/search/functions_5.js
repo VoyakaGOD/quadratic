@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['waitchar_0',['WaitChar',['../_i_o_lib_8cpp.html#ad41bb5515d18ca358e707611a9c4985d',1,'WaitChar():&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#ad41bb5515d18ca358e707611a9c4985d',1,'WaitChar():&#160;IOLib.cpp']]]
+  ['printlog_0',['PrintLog',['../_test_lib_8cpp.html#a0073f0bd7069eaf20cc1d6bc8791dcef',1,'PrintLog(const char *format,...):&#160;TestLib.cpp'],['../_test_lib_8hpp.html#a0073f0bd7069eaf20cc1d6bc8791dcef',1,'PrintLog(const char *format,...):&#160;TestLib.cpp']]],
+  ['printtestresult_1',['PrintTestResult',['../_test_lib_8cpp.html#a809aea9368f1939ac0c0218343e15216',1,'PrintTestResult(int success):&#160;TestLib.cpp'],['../_test_lib_8hpp.html#a809aea9368f1939ac0c0218343e15216',1,'PrintTestResult(int success):&#160;TestLib.cpp']]]
 ];

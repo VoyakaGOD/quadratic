@@ -8,6 +8,6 @@ var searchData=
   ['iolib_2ehpp_5',['IOLib.hpp',['../_i_o_lib_8hpp.html',1,'']]],
   ['isclose_6',['IsClose',['../equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9',1,'equations.test.cpp']]],
   ['isdouble_7',['IsDouble',['../_i_o_lib_8cpp.html#a4b9f184589dc7f93d3006c1907a12d71',1,'IsDouble(char *string):&#160;IOLib.cpp'],['../_i_o_lib_8hpp.html#a4b9f184589dc7f93d3006c1907a12d71',1,'IsDouble(char *string):&#160;IOLib.cpp']]],
-  ['issetsequal_8',['IsSetsEqual',['../equations_8test_8cpp.html#a06a56117221a54475a01c35730c3f833',1,'equations.test.cpp']]],
+  ['isrootsequal_8',['IsRootsEqual',['../equations_8test_8cpp.html#a1750200859061327605de0a586fe2b75',1,'equations.test.cpp']]],
   ['istiny_9',['IsTiny',['../equations_8cpp.html#a43eaa13fdc1254703a85d0836f265acb',1,'IsTiny(double num):&#160;equations.cpp'],['../equations_8hpp.html#a43eaa13fdc1254703a85d0836f265acb',1,'IsTiny(double num):&#160;equations.cpp']]]
 ];

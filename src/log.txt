@@ -1,22 +1,16 @@
 Standart tests:
 Test 0:
-[roots count] expected 0, given 0
-Result: fail!
+Result: success!
 Test 1:
-[roots count] expected 404, given 404
-Result: fail!
+Result: success!
 Test 2:
-[roots count] expected 1, given 1
-[x1] expected -5, given -5
-Result: fail!
+Result: success!
 Test 3:
 Result: success!
 Test 4:
 Result: success!
 Test 5:
-[roots count] expected 1, given 1
-[x1] expected -0.3, given -0.3
-Result: fail!
+Result: success!
 Random tests:
 test 0: start!
 Result: success!
