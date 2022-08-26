@@ -1,6 +1,4 @@
------------------------------------------------------
-#                Quadratic                          #
------------------------------------------------------
+# Quadratic                          
 
 Quadratic is console program that solve quadratic equations.
 
@@ -23,3 +21,8 @@ You can use the program in 3 difference modes:
 
 3)Enter file name as comand line argument.
 ![third_mode](third_mode.png)
+
+# Unit tests
+This repository also contains code for unit tests.
+
+You can build it by command: "make test" and them run equations.test.exe file.

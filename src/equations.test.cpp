@@ -84,8 +84,10 @@ void SolveEquationRandomTest(int *__success)
 /// @brief Test SolveEquation function with parameters specified by TestInfo for each element of tests array.
 /// @param[in] tests array of tests
 /// @param[in] count the number of test
-void SolveEquationTestArray(TestInfo *tests, int count)
+/// @return the number of successfuly passed tests
+int SolveEquationTestArray(TestInfo *tests, int count)
 {
+    int successfulyTestsCount = 0;
     for(int i = 0; i < count; i++)
     {
         TestInfo test = tests[i];
@@ -97,6 +99,7 @@ void SolveEquationTestArray(TestInfo *tests, int count)
         if(test.RootsCount == rootsCount && IsRootsEqual(test.X1, test.X2, x1, x2))
         {
             PrintTestResult(1);
+            successfulyTestsCount++;
             continue;
         }
 
@@ -117,6 +120,7 @@ void SolveEquationTestArray(TestInfo *tests, int count)
         }
         PrintTestResult(0);
     }
+    return successfulyTestsCount;
 }
 
 int main(int argc, char* argv[])
@@ -125,6 +129,7 @@ int main(int argc, char* argv[])
         OpenLogFile(argv[1]);
 
     PRINT("Standart tests:\n");
+    int standartTestsCount = 6;
     TestInfo tests[] = { 
         {0,  0,  1,    NO_ROOTS,    NAN,    NAN}, 
         {0,  0,  0,    INF_ROOTS,   NAN,    NAN}, 
@@ -133,7 +138,8 @@ int main(int argc, char* argv[])
         {3,  12, 0,    TWO_ROOTS,   0,    -4}, 
         {10, 6,  0.9,  ONE_ROOT,    -0.3, NAN}
     };
-    SolveEquationTestArray(tests, 6);
+    
+    int successfulyTestsCount = SolveEquationTestArray(tests, standartTestsCount);
 
     PRINT("Random tests:\n");
     srand(time(NULL));
@@ -143,7 +149,10 @@ int main(int argc, char* argv[])
         PRINT("test %d: start!\n", i);
         SolveEquationRandomTest(&success);
         PrintTestResult(success);
+        successfulyTestsCount += success;
     }
+
+    PRINT("<--------Passed: %d/%d!-------->\n", successfulyTestsCount, (standartTestsCount + RandomTestCount));
 
     CloseLogFile();
     
