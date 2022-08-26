@@ -51,12 +51,13 @@ void InputCoefficientsFromStdin(double *a, double *b, double *c)
 
 	printf("Enter coefficients of quadratic:");
 
-	while(true)
+	while(1)
 	{
 		scanf("%lg %lg %lg", a, b, c);
 		if(getchar() == '\n')
-		break;
+			break;
 		
+		fflush(stdin);
 		printf("Incorrect input data!\n");
 	}
 }
@@ -106,22 +107,22 @@ void DisplayRoots(RootsCount rootsCount, double x1, double x2)
 {
 	switch(rootsCount)
 	{
-		case RootsCount::No:
+		case No:
 		{
 			printf("The quadratic has no roots!");
 			break;
 		}
-		case RootsCount::One:
+		case One:
 		{
 			printf("The quadratic has one root: %lg!", x1);
 			break;
 		}
-		case RootsCount::Two:
+		case Two:
 		{
 			printf("The quadratic has two roots: %lg and %lg!", x1, x2);
 			break;
 		}
-		case RootsCount::Infinity:
+		case Infinity:
 		{
 			printf("The quadratic has infinity number of roots!");
 			break;

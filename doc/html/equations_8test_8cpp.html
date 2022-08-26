@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Quadratic<span id="projectnumber">&#160;0.0.0.1</span>
+   <div id="projectname">Quadratic<span id="projectnumber">&#160;0.0.1.1</span>
    </div>
    <div id="projectbrief">...</div>
   </td>
@@ -69,15 +69,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">equations.test.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="equations_8hpp_source.html">equations.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_i_o_lib_8hpp_source.html">IOLib.hpp</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_i_o_lib_8hpp_source.html">IOLib.hpp</a>&quot;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -85,58 +83,76 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_test_info.html">TestInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae0a72bc174ac97e90c4a711e5e52d540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ae0a72bc174ac97e90c4a711e5e52d540">TEST_ASSERT</a>(condition)&#160;&#160;&#160;if(!(condition)) *__success = 0;</td></tr>
+<tr class="separator:ae0a72bc174ac97e90c4a711e5e52d540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15bb631053a1fce9c5470701900984c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(...)&#160;&#160;&#160;printf(__VA_ARGS__); if(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> != NULL) fprintf(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a>, __VA_ARGS__)</td></tr>
+<tr class="separator:a15bb631053a1fce9c5470701900984c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aafafcda5d6ec7dfc95c772c7be70084d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#aafafcda5d6ec7dfc95c772c7be70084d">Assert</a> (int condition)</td></tr>
-<tr class="memdesc:aafafcda5d6ec7dfc95c772c7be70084d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects the test.  <a href="equations_8test_8cpp.html#aafafcda5d6ec7dfc95c772c7be70084d">More...</a><br /></td></tr>
-<tr class="separator:aafafcda5d6ec7dfc95c772c7be70084d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809aea9368f1939ac0c0218343e15216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216">PrintTestResult</a> (int success)</td></tr>
+<tr class="memdesc:a809aea9368f1939ac0c0218343e15216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cute print of test result.  <a href="equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216">More...</a><br /></td></tr>
 <tr class="separator:a809aea9368f1939ac0c0218343e15216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c51cfc7cb51930fb5905166184b6829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a5c51cfc7cb51930fb5905166184b6829">Run</a> (void(*test)())</td></tr>
-<tr class="memdesc:a5c51cfc7cb51930fb5905166184b6829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the test and show result.  <a href="equations_8test_8cpp.html#a5c51cfc7cb51930fb5905166184b6829">More...</a><br /></td></tr>
-<tr class="separator:a5c51cfc7cb51930fb5905166184b6829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06a56117221a54475a01c35730c3f833"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a06a56117221a54475a01c35730c3f833">IsSetsEqual</a> (double a1, double a2, double b1, double b2)</td></tr>
 <tr class="memdesc:a06a56117221a54475a01c35730c3f833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare A{a1, a2} and B{b1, b2} without order.  <a href="equations_8test_8cpp.html#a06a56117221a54475a01c35730c3f833">More...</a><br /></td></tr>
 <tr class="separator:a06a56117221a54475a01c35730c3f833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9">IsClose</a> (double a, double b)</td></tr>
 <tr class="memdesc:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is difference between a and b is tiny.  <a href="equations_8test_8cpp.html#abdd33bb9ebb5e006f4996308d4cb6bb9">More...</a><br /></td></tr>
 <tr class="separator:abdd33bb9ebb5e006f4996308d4cb6bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d9c9ff03d79c7b9888be42de0ab075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a10d9c9ff03d79c7b9888be42de0ab075">SolveEquationRandomTest</a> ()</td></tr>
-<tr class="separator:a10d9c9ff03d79c7b9888be42de0ab075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba334b074e34fbe5373f5ed2a3f0efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#afba334b074e34fbe5373f5ed2a3f0efa">SolveEquationRandomTest</a> (int *__success)</td></tr>
+<tr class="memdesc:afba334b074e34fbe5373f5ed2a3f0efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test SolveEquation function with random parameters.  <a href="equations_8test_8cpp.html#afba334b074e34fbe5373f5ed2a3f0efa">More...</a><br /></td></tr>
+<tr class="separator:afba334b074e34fbe5373f5ed2a3f0efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ab364bb9f6c3676ca1e522ab3229cf9c0">SolveEquationTestArray</a> (<a class="el" href="struct_test_info.html">TestInfo</a> *tests, int count)</td></tr>
-<tr class="memdesc:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run test for each element of tests.  <a href="equations_8test_8cpp.html#ab364bb9f6c3676ca1e522ab3229cf9c0">More...</a><br /></td></tr>
+<tr class="memdesc:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test SolveEquation function with parameters specified by <a class="el" href="struct_test_info.html">TestInfo</a> for each element of tests array.  <a href="equations_8test_8cpp.html#ab364bb9f6c3676ca1e522ab3229cf9c0">More...</a><br /></td></tr>
 <tr class="separator:ab364bb9f6c3676ca1e522ab3229cf9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2cdba7e42e626cb520dbc6c7c0798ce5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a2cdba7e42e626cb520dbc6c7c0798ce5">NumberOfTest</a> = 1</td></tr>
-<tr class="separator:a2cdba7e42e626cb520dbc6c7c0798ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9ebcb6592361569c37e54393408af2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#abc9ebcb6592361569c37e54393408af2">IsTestFailed</a> = 0</td></tr>
-<tr class="separator:abc9ebcb6592361569c37e54393408af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927459878a7530ff5847e74e8ece5765"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> = NULL</td></tr>
+<tr class="separator:a927459878a7530ff5847e74e8ece5765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aafafcda5d6ec7dfc95c772c7be70084d" name="aafafcda5d6ec7dfc95c772c7be70084d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafafcda5d6ec7dfc95c772c7be70084d">&#9670;&nbsp;</a></span>Assert()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a15bb631053a1fce9c5470701900984c7" name="a15bb631053a1fce9c5470701900984c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15bb631053a1fce9c5470701900984c7">&#9670;&nbsp;</a></span>PRINT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Assert </td>
+          <td class="memname">#define PRINT</td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>condition</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;printf(__VA_ARGS__); if(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a> != NULL) fprintf(<a class="el" href="equations_8test_8cpp.html#a927459878a7530ff5847e74e8ece5765">LogFile</a>, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rejects the test. </p>
+</div>
+</div>
+<a id="ae0a72bc174ac97e90c4a711e5e52d540" name="ae0a72bc174ac97e90c4a711e5e52d540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a72bc174ac97e90c4a711e5e52d540">&#9670;&nbsp;</a></span>TEST_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">condition</td><td>)</td>
+          <td>&#160;&#160;&#160;if(!(condition)) *__success = 0;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="abdd33bb9ebb5e006f4996308d4cb6bb9" name="abdd33bb9ebb5e006f4996308d4cb6bb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abdd33bb9ebb5e006f4996308d4cb6bb9">&#9670;&nbsp;</a></span>IsClose()</h2>
 
@@ -209,8 +225,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,8 +234,19 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -242,30 +269,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a5c51cfc7cb51930fb5905166184b6829" name="a5c51cfc7cb51930fb5905166184b6829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c51cfc7cb51930fb5905166184b6829">&#9670;&nbsp;</a></span>Run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Run </td>
-          <td>(</td>
-          <td class="paramtype">void(*)()&#160;</td>
-          <td class="paramname"><em>test</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Run the test and show result. </p>
+<p>Cute print of test result. </p>
 
 </div>
 </div>
-<a id="a10d9c9ff03d79c7b9888be42de0ab075" name="a10d9c9ff03d79c7b9888be42de0ab075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10d9c9ff03d79c7b9888be42de0ab075">&#9670;&nbsp;</a></span>SolveEquationRandomTest()</h2>
+<a id="afba334b074e34fbe5373f5ed2a3f0efa" name="afba334b074e34fbe5373f5ed2a3f0efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba334b074e34fbe5373f5ed2a3f0efa">&#9670;&nbsp;</a></span>SolveEquationRandomTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,11 +282,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void SolveEquationRandomTest </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>__success</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Test SolveEquation function with random parameters. </p>
 
 </div>
 </div>
@@ -307,33 +319,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Run test for each element of tests. </p>
+<p>Test SolveEquation function with parameters specified by <a class="el" href="struct_test_info.html">TestInfo</a> for each element of tests array. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="abc9ebcb6592361569c37e54393408af2" name="abc9ebcb6592361569c37e54393408af2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc9ebcb6592361569c37e54393408af2">&#9670;&nbsp;</a></span>IsTestFailed</h2>
+<a id="a927459878a7530ff5847e74e8ece5765" name="a927459878a7530ff5847e74e8ece5765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927459878a7530ff5847e74e8ece5765">&#9670;&nbsp;</a></span>LogFile</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IsTestFailed = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2cdba7e42e626cb520dbc6c7c0798ce5" name="a2cdba7e42e626cb520dbc6c7c0798ce5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cdba7e42e626cb520dbc6c7c0798ce5">&#9670;&nbsp;</a></span>NumberOfTest</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int NumberOfTest = 1</td>
+          <td class="memname">FILE* LogFile = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">

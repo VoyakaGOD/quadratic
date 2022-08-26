@@ -1,54 +1,50 @@
 Standart tests:
 Test 0:
 [roots count] expected 0, given 0
----------------------------------------Result: success[V]!
+Result: fail!
 Test 1:
 [roots count] expected 404, given 404
----------------------------------------Result: success[V]!
+Result: fail!
 Test 2:
 [roots count] expected 1, given 1
 [x1] expected -5, given -5
----------------------------------------Result: success[V]!
+Result: fail!
 Test 3:
-[roots count] expected 2, given 2
-[x1 x2] expected 6 -6, given 6 -6
----------------------------------------Result: success[V]!
+Result: success!
 Test 4:
-[roots count] expected 2, given 2
-[x1 x2] expected 0 -4, given 0 -4
----------------------------------------Result: success[V]!
+Result: success!
 Test 5:
 [roots count] expected 1, given 1
 [x1] expected -0.3, given -0.3
----------------------------------------Result: success[V]!
+Result: fail!
 Random tests:
 test 0: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 1: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 2: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 3: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 4: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 5: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 6: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 7: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 8: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 9: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 10: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 11: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 12: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 13: start!
----------------------------------------Result: success[V]!
+Result: success!
 test 14: start!
----------------------------------------Result: success[V]!
+Result: success!

@@ -33,9 +33,9 @@ RootsCount SolveLinearEquation(double a, double b, double *x)
 	assert(x != NULL);
 
     if(IsTiny(a))
-		return IsTiny(b) ? RootsCount::Infinity : RootsCount::No;
+		return IsTiny(b) ? Infinity : No;
 	*x = -b/a;
-	return RootsCount::One;
+	return One;
 }
 
 RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, double *x2)
@@ -55,23 +55,23 @@ RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, doub
 	{
 		*x1 = 0;
 		*x2 = -b/a;
-		return (IsTiny(b)) ? RootsCount::One : RootsCount::Two;
+		return (IsTiny(b)) ? One : Two;
     }
 
 	double D = b*b - 4*a*c;
 	if (IsTiny(D))
 	{
 		*x1 = -0.5 * b / a;
-		return RootsCount::One;
+		return One;
 	}
 	if (D < 0)
 	{
-		return RootsCount::No;
+		return No;
 	}
 	
 	double sqrtD = sqrt(D);
 	double denominator = 1 / (2*a);
 	*x1 = denominator * (-b + sqrtD);
 	*x2 = denominator * (-b - sqrtD);
-	return RootsCount::Two;
+	return Two;
 }

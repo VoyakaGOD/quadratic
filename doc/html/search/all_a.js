@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rootscount_0',['RootsCount',['../struct_test_info.html#ad3d6343e692c3fa30079a7487b55cdc3',1,'TestInfo::RootsCount()'],['../equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3',1,'RootsCount():&#160;equations.hpp']]],
-  ['run_1',['Run',['../equations_8test_8cpp.html#a5c51cfc7cb51930fb5905166184b6829',1,'equations.test.cpp']]]
+  ['print_0',['PRINT',['../equations_8test_8cpp.html#a15bb631053a1fce9c5470701900984c7',1,'equations.test.cpp']]],
+  ['printtestresult_1',['PrintTestResult',['../equations_8test_8cpp.html#a809aea9368f1939ac0c0218343e15216',1,'equations.test.cpp']]],
+  ['proj_2ecpp_2',['proj.cpp',['../proj_8cpp.html',1,'']]]
 ];
