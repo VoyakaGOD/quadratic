@@ -85,7 +85,7 @@ void SolveEquationRandomTest(int *__success)
 /// @param[in] tests array of tests
 /// @param[in] count the number of test
 /// @return the number of successfuly passed tests
-int SolveEquationTestArray(TestInfo *tests, int count)
+int SolveEquationTestArray(const TestInfo *tests, int count)
 {
     int successfulyTestsCount = 0;
     for(int i = 0; i < count; i++)
@@ -130,7 +130,7 @@ int main(int argc, char* argv[])
 
     PRINT("Standart tests:\n");
     int standartTestsCount = 6;
-    TestInfo tests[] = { 
+    const TestInfo tests[] = { 
         {0,  0,  1,    NO_ROOTS,    NAN,    NAN}, 
         {0,  0,  0,    INF_ROOTS,   NAN,    NAN}, 
         {0,  5,  25,   ONE_ROOT,    -5,   NAN},

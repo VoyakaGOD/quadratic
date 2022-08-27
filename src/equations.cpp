@@ -37,10 +37,8 @@ static RootsCount SolveQuadraticEquation(double a, double b, double c, double *x
 
 RootsCount SolveLinearEquation(double a, double b, double *x)
 {
-	assert(!isnan(a));
-	assert(!isnan(b));
-	assert(isfinite(a));
-	assert(isfinite(b));
+	assert(!isnan(a) && !isnan(b));
+	assert(isfinite(a) && isfinite(b));
 	assert(x != NULL);
 
     if(IsTiny(a))
@@ -51,12 +49,8 @@ RootsCount SolveLinearEquation(double a, double b, double *x)
 
 RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2)
 {
-	assert(!isnan(a));
-	assert(!isnan(b));
-	assert(!isnan(c));
-	assert(isfinite(a));
-	assert(isfinite(b));
-	assert(isfinite(c));
+	assert(!isnan(a) && !isnan(b) && !isnan(c));
+	assert(isfinite(a) && isfinite(b) && isfinite(c));
 	assert(x1 != NULL);
 	assert(x2 != NULL);
 	assert(x1 != x2);
