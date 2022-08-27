@@ -27,12 +27,7 @@ RootsCount SolveEquation(double a, double b, double c, double *x1, double *x2);
 /// @return number of roots
 RootsCount SolveLinearEquation(double a, double b, double *x);
 
-/// Solve equation: ax^2 + bx + c = 0
-/// Where a is not equal to zero!
-/// @return number of roots
-RootsCount SolveQuadraticEquation(double a, double b, double c, double *x1, double *x2);
-
-/// Check is |num| is less than 1e-7.
+/// Check is |num| is less than double_epsilon constant.
 int IsTiny(double num);
 
 #endif
