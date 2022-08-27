@@ -2,7 +2,7 @@
 
 Quadratic is console program that solve quadratic equations.
 
-This project is created by me while I'm lerning C. 
+This project was created by me while I'm lerning C. 
 
 ## Download 
 You can download source code here.

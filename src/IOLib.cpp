@@ -39,7 +39,9 @@ void InputCoefficientsFromFile(FILE* file, double *a, double *b, double *c)
 	assert(fscanf(file, "%lg", a) > 0);
 	assert(fscanf(file, "%lg", b) > 0);
 	assert(fscanf(file, "%lg", c) > 0);
-	assert(getc(file) == EOF);
+	int chr = 0;
+	while((chr = getc(file)) != EOF)
+		assert(chr == ' ');
 }
 
 void InputCoefficientsFromStdin(double *a, double *b, double *c)
@@ -50,14 +52,20 @@ void InputCoefficientsFromStdin(double *a, double *b, double *c)
 
 	printf("Enter coefficients of quadratic:");
 
-	while(1)
+	char chr = 0;
+	while(chr != '\n')
 	{
 		scanf("%lg %lg %lg", a, b, c);
-		if(getchar() == '\n')
-			break;
 		
-		fflush(stdin);
-		printf("Incorrect input data!\n");
+		while((chr = getchar()) != '\n')
+		{
+			if(chr != ' ')
+			{
+				fflush(stdin);
+				printf("Incorrect input data!\n");
+				break;
+			}
+		}
 	}
 }
 

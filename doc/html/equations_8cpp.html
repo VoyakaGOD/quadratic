@@ -78,14 +78,12 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a43eaa13fdc1254703a85d0836f265acb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a43eaa13fdc1254703a85d0836f265acb">IsTiny</a> (double num)</td></tr>
-<tr class="memdesc:a43eaa13fdc1254703a85d0836f265acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check is |num| is less than 1e-7.  <a href="equations_8cpp.html#a43eaa13fdc1254703a85d0836f265acb">More...</a><br /></td></tr>
+<tr class="memdesc:a43eaa13fdc1254703a85d0836f265acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check is |num| is less than double_epsilon constant.  <a href="equations_8cpp.html#a43eaa13fdc1254703a85d0836f265acb">More...</a><br /></td></tr>
 <tr class="separator:a43eaa13fdc1254703a85d0836f265acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32bd7a41da587e672b825fa70a224787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a32bd7a41da587e672b825fa70a224787">SolveEquation</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
-<tr class="separator:a32bd7a41da587e672b825fa70a224787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3dde66e6bfce3e630ff3b08961008ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#aa3dde66e6bfce3e630ff3b08961008ce">SolveLinearEquation</a> (double a, double b, double *x)</td></tr>
 <tr class="separator:aa3dde66e6bfce3e630ff3b08961008ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32228b172c53cf6b36766676724fef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#aa32228b172c53cf6b36766676724fef7">SolveQuadraticEquation</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
-<tr class="separator:aa32228b172c53cf6b36766676724fef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bd7a41da587e672b825fa70a224787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a32bd7a41da587e672b825fa70a224787">SolveEquation</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
+<tr class="separator:a32bd7a41da587e672b825fa70a224787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a43eaa13fdc1254703a85d0836f265acb" name="a43eaa13fdc1254703a85d0836f265acb"></a>
@@ -104,7 +102,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check is |num| is less than 1e-7. </p>
+<p>Check is |num| is less than double_epsilon constant. </p>
 
 </div>
 </div>
@@ -197,53 +195,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Solve equation: ax + b = 0 </p><dl class="section return"><dt>Returns</dt><dd>number of roots </dd></dl>
-
-</div>
-</div>
-<a id="aa32228b172c53cf6b36766676724fef7" name="aa32228b172c53cf6b36766676724fef7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa32228b172c53cf6b36766676724fef7">&#9670;&nbsp;</a></span>SolveQuadraticEquation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="equations_8hpp.html#aa25c6d8cdf0bee88e27388ccef3dcdc3">RootsCount</a> SolveQuadraticEquation </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>x2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Solve equation: ax^2 + bx + c = 0 Where a is not equal to zero! </p><dl class="section return"><dt>Returns</dt><dd>number of roots </dd></dl>
 
 </div>
 </div>
